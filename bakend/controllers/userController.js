@@ -3,7 +3,11 @@ import { User } from '../models/usermodel.js'
 import generateToken from '../utils/jsonwebtoken.js'
 import bcrypt from 'bcryptjs'
 
+<<<<<<< HEAD
 //POST method, User register, api/users/
+=======
+// User register
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8
 
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body
@@ -34,8 +38,12 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error('user data invalid')
   }
 })
+<<<<<<< HEAD
 
 // POST method, USER login,  api/users/login
+=======
+// POST api/user/login
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8
 
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body
@@ -69,6 +77,7 @@ const userProfile = asyncHandler(async (req, res) => {
       isAdmin: user.isAdmin,
     })
   }
+<<<<<<< HEAD
 })
 
 const updateUserProfile = asyncHandler(async (req, res) => {
@@ -96,3 +105,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
   }
 })
 export { authUser, registerUser, userProfile, updateUserProfile }
+=======
+})
+export { authUser, registerUser, userProfile }
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8

@@ -12,7 +12,10 @@ import ShippingScreen from './screens/shippingScreen'
 import reportWebVitals from './reportWebVitals'
 import HomeScreen from './screens/HomeScreen'
 import LoginScreen from './screens/LoginScreen'
+<<<<<<< HEAD
 import RegisterScreen from './screens/RegisterScreen'
+=======
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8
 
 ReactDOM.render(
   <Provider store={store}>
@@ -21,7 +24,10 @@ ReactDOM.render(
         <Route path='/' element={<App />}>
           <Route index element={<HomeScreen />} />
           <Route path='/login' element={<LoginScreen />} />
+<<<<<<< HEAD
           <Route path='/register' element={<RegisterScreen />} />
+=======
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8
           <Route path='product/:id' element={<ProductScreen />} />
           <Route path='cart/:id' element={<CartScreen />} />
           <Route path='shipping' element={<ShippingScreen />} />

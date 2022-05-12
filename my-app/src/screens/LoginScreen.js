@@ -4,12 +4,17 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+<<<<<<< HEAD
 import { login } from '../reducers/userReducers/userLoginSlice'
+=======
+import { login } from '../reducers/userReducers'
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+<<<<<<< HEAD
   const { search } = useLocation()
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -21,6 +26,20 @@ const LoginScreen = () => {
   useEffect(() => {
     if (userInfo) {
       navigate(redirect)
+=======
+  const location = useLocation()
+
+  const redirect = location ? location.search.split('=')[1] : '/'
+  const userLogin = useSelector(state => state.userLogin)
+  const { status, error, userInfo } = userLogin
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate('/')
+>>>>>>> 7f2c7dfbe6d088d2ab4d27d61f600723ca0815c8
     }
   }, [userInfo, redirect, navigate])
 
